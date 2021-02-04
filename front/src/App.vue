@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="nav" v-if="logined">
+      <router-link to="/">ESG자산</router-link> |
+      <router-link to="/about">총 자산</router-link>
+    </div>
+    <div v-else>
+      <Home v-on:login='login'/>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      logined:false
+    }
+  },
+  methods: {
+    login() {
+      this.logined=true
+    }
   }
 }
 </script>
@@ -22,6 +33,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
