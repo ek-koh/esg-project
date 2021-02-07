@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div v-if="logined">
-      파이차트
+      <CChartDoughnutExample/>
     </div>
     <div v-else>
       <h1>으쓱ㅡESG</h1>
@@ -12,8 +12,13 @@
 </template>
 
 <script>
+import CChartDoughnutExample from './CChartDoughnutExample'
+
 export default {
   name: 'Home',
+  components: {
+    CChartDoughnutExample
+  },
   props: {
     msg: String
   },
