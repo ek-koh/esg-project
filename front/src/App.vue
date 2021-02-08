@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <Home v-on:login='login'/>
-    </div>
     <router-view/>
   </div>
 </template>
