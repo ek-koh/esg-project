@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div>
     <div v-if="logined">
       <CChartDoughnutExample/>
     </div>
-    <div v-else>
-      <h1>으쓱ㅡESG</h1>
+    <div class="align-self-center" v-else>
+      <img src="../assets/logo.png" alt="으쓱-" height="250px" width="300px">
       <br>
-      <button class="btn btn-lg btn-primary" v-on:click="login">공인인증서로 로그인</button>
+      <button class="btn btn-lg btn-primary" v-on:click="login">공인인증서로 Login</button>
     </div>
   </div>
 </template>

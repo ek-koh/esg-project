@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav" v-if="logined">
+    <div id="nav">
       <router-link to="/">ESG자산</router-link> |
       <router-link to="/about">총 자산</router-link>
     </div>
-    <div v-else>
+    <div id="nav">
       <Home v-on:login='login'/>
     </div>
     <router-view/>
@@ -27,6 +27,11 @@ export default {
 </script>
 
 <style>
+
+@font-face{ font-family:ng; src:url('fonts/NanumGothic.woff') format(‘woff’);}
+
+body{font-family:'나눔고딕', 'NanumGothic', ng}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
