@@ -1,10 +1,6 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">ESG자산</router-link> |
-      <router-link to="/about">총 자산</router-link>
-    </div>
-    <div id="nav">
       <Home v-on:login='login'/>
     </div>
     <router-view/>

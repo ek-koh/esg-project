@@ -1,6 +1,10 @@
 <template>
   <div>
     <div v-if="logined">
+      <div id="nav">
+        <router-link to="/">ESG자산</router-link> |
+        <router-link to="/about">총 자산</router-link>
+      </div>
       <CChartDoughnutExample/>
     </div>
     <div class="align-self-center" v-else>
