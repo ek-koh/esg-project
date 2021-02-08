@@ -1,18 +1,32 @@
 <template>
   <div>
     <div v-if="logined">
-      <div class="container" style="padding:0">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0; margin:0">
-        <a class="navbar-brand" href="#">
-          <img style="margin-top:8px; margin-left: 20px;" src="../assets/logo.png" alt="으쓱-" height="60px" width="75px">
-        </a>
-      </nav>
-    </div>
-      <div id="nav">
-        <router-link to="/">ESG자산</router-link> |
-        <router-link to="/about">총 자산</router-link>
+      <div class="container" style="padding-top:80px; padding-bottom:80px;">
+        <nav class="container navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; top:0; left:0; justify-content:space-between; padding:0; margin:0">
+          <a class="navbar-brand" href="#">
+            <img style="margin-top:8px; margin-left: 20px;" src="../assets/logo.png" alt="으쓱-" height="60px" width="75px">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+        <div id="nav">
+          <router-link to="/">ESG자산</router-link> |
+          <router-link to="/about">총 자산</router-link>
+        </div>
+        <CChartDoughnutExample/>
+        <CChartDoughnutExample/>
+        <CChartDoughnutExample/>
+        <CChartDoughnutExample/>
+        <nav class="container navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; margin-top: 80px; bottom:0; left:0; justify-content:space-between; padding:0; margin:0">
+          <a class="navbar-brand" href="#">
+            <img style="margin-top:8px; margin-left: 20px;" src="../assets/logo.png" alt="으쓱-" height="60px" width="75px">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
       </div>
-      <CChartDoughnutExample/>
     </div>
     <div class="align-self-center" v-else>
       <span v-for="n in 7" :key=n><br></span>
