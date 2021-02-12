@@ -11,6 +11,7 @@ const Dashboard2 = () => import('@/views/Dashboard2')
 const Myasset = () => import('@/views/Myasset')
 const Myesg = () => import('@/views/Myesg')
 const Search = () => import('@/views/Search')
+const Select = () => import('@/views/Select')
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ function configRoutes () {
           path: 'search',
           name: 'Search',
           component: Search
+        },
+        {
+          path: 'select',
+          name: 'Select',
+          component: Select
         },
       ]
     },

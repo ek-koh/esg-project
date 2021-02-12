@@ -8,7 +8,7 @@
 
     </div>
     <br>
-    <div v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
+    <div name="fade" v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/90/27/5c/90275cb88dfa4196c65df4c4bbd37548.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -16,7 +16,7 @@
         <div class="caption_title">신재생에너지</div>
         <div class="caption_desc">
           신재생에너지관련섹터
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <router-link to="select" class="caption_link" style="margin:15px">더 보기</router-link>
         </div>
       </div>
     </div>
@@ -277,5 +277,11 @@ export default {
    -o-transition-delay: 0.2s;
    -ms-transition-delay: 0.2s;
    transition-delay: 0.2s;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
