@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <div style="text-align:center;">
+    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example" style="display:inline-block; margin-bottom:10px;">
+      <button type="button" class="btn btn-secondary" @click="E">E</button>
+      <button type="button" class="btn btn-secondary" @click="S">S</button>
+      <button type="button" class="btn btn-secondary" @click="G">G</button>
+    </div>
+    <br>
     <div class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/90/27/5c/90275cb88dfa4196c65df4c4bbd37548.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
@@ -8,7 +14,7 @@
         <div class="caption_title">신재생에너지</div>
         <div class="caption_desc">
           신재생에너지관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
@@ -20,7 +26,7 @@
         <div class="caption_title">전기차</div>
         <div class="caption_desc">
           전기차관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
@@ -32,7 +38,7 @@
         <div class="caption_title">수소에너지</div>
         <div class="caption_desc">
           수소에너지관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
@@ -44,7 +50,7 @@
         <div class="caption_title">동물</div>
         <div class="caption_desc">
           동물관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
@@ -56,7 +62,7 @@
         <div class="caption_title">동물</div>
         <div class="caption_desc">
           동물관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
@@ -68,7 +74,7 @@
         <div class="caption_title">동물</div>
         <div class="caption_desc">
           동물관련섹터
-          <a herf="#" class="caption_link" style="margin:10px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
