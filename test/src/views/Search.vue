@@ -4,9 +4,11 @@
       <button type="button" class="btn btn-secondary" @click="E">E</button>
       <button type="button" class="btn btn-secondary" @click="S">S</button>
       <button type="button" class="btn btn-secondary" @click="G">G</button>
+      <button type="button" class="btn btn-secondary" @click="all">All</button>
+
     </div>
     <br>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/90/27/5c/90275cb88dfa4196c65df4c4bbd37548.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -18,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/ed/93/1f/ed931f7bac82e67b4e6c24dad1406c2f.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -30,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/8e/de/a1/8edea18badb862a5a155cfa1668ab596.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -42,7 +44,7 @@
         </div>
       </div>
     </div>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isS" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://www.ikont.co.jp/company/img/ph-company-08.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -54,7 +56,7 @@
         </div>
       </div>
     </div>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isG" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/9f/14/b5/9f14b5d633947854a59f1f029b8896e1.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -66,7 +68,7 @@
         </div>
       </div>
     </div>
-    <div class="hover_effect_box hover_effect_1" style="float:left;">
+    <div v-show="isG" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://www.ikont.co.jp/company/img/ph-company-08.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
@@ -82,13 +84,37 @@
 </template>
 
 <script>
+// import func from '../../vue-temp/vue-editor-bridge'
 export default {
   name: 'Search',
   data() {
     return {
+      isE: true,
+      isS: true,
+      isG: true
     }
   },
   methods: {
+    E: function() {
+      this.isS = false
+      this.isG = false
+      this.isE = true
+    },
+    S: function() {
+      this.isE = false
+      this.isG = false
+      this.isS = true
+    },
+    G: function() {
+      this.isG = true
+      this.isS = false
+      this.isE = false
+    },
+    all: function() {
+      this.isE = true
+      this.isS = true
+      this.isG = true
+    }
   }
 }
 </script>
