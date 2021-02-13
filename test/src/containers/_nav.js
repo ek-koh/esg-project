@@ -32,6 +32,9 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
+        name: 'About Us',
+        to: '/about',
+        icon: 'cil-cursor'
       },
       {
         _name: 'CSidebarNavItem',
@@ -51,6 +54,7 @@ export default [
       {
         _name: 'CSidebarNavItem',
         name: '신한 알파 다운로드',
+        href: 'https://play.google.com/store/apps/details?id=com.shinhaninvest.nsmts&hl=ko&gl=US',
         icon: { name: 'cil-cloud-download', class: 'text-white' },
         _class: 'bg-primary text-white',
         target: '_blank'

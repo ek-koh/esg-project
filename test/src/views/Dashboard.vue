@@ -4,16 +4,16 @@
       <CCardTitle>
         <CRow class="align-items-center">
           <CCol sm xs="12" class="text-center mt-3">
-            <CButton color="primary" to="/">
+            <CButton color="primary" @click="Asset">
               <CIcon name="cil-lightbulb"/>&nbsp;My 총자산
             </CButton>&nbsp;
-            <CButton color="success" to="/dashboard2">
+            <CButton color="success" @click="ESG">
               <CIcon name="cil-lightbulb"/>&nbsp;My ESG자산
             </CButton>
           </CCol>
         </CRow>
       </CCardTitle>
-      <CCardBody>
+      <CCardBody v-show="isAsset">
         <CChartDoughnutExample style="margin-top:10px;"/>
         <br>
         <CRow class="text-center">
@@ -23,6 +23,16 @@
           </CCol>
         </CRow>
       </CCardBody>
+      <CCardBody v-show="isESG">
+        <CChartDoughnutExample2 style="margin-top:10px;"/>
+        <br>
+        <CRow class="text-center">
+          <CCol sm="5">
+            <h4 id="cma" class="card-title mb-0">ESG 총자산</h4>
+            <div class="small text-muted">13,500,000원</div>
+          </CCol>
+        </CRow>
+      </CCardBody>      
       <CCardFooter>
         <CRow class="text-center">
           <CCol md sm="12" class="mb-sm-2 mb-0">
@@ -198,17 +208,29 @@
 
 <script>
 import CChartDoughnutExample from './charts/CChartDoughnutExample'
+import CChartDoughnutExample2 from './charts/CChartDoughnutExample2'
 
 export default {
   name: 'Dashboard',
   components: {
     CChartDoughnutExample,
+    CChartDoughnutExample2
   },
   data () {
     return {
+      isAsset: true,
+      isESG: false
     }
   },
   methods: {
+    Asset: function() {
+      this.isAsset = true
+      this.isESG = false
+    },
+    ESG: function() {
+      this.isAsset = false
+      this.isESG = true
+    },
     color (value) {
       let $color
       if (value <= 25) {

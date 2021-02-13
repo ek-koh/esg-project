@@ -6,7 +6,7 @@ const TheContainer = () => import('@/containers/TheContainer')
 
 // Views
 const Dashboard = () => import('@/views/Dashboard')
-const Dashboard2 = () => import('@/views/Dashboard2')
+const About = () => import('@/views/About')
 
 const Myasset = () => import('@/views/Myasset')
 const Myesg = () => import('@/views/Myesg')
@@ -36,11 +36,6 @@ function configRoutes () {
           component: Dashboard
         },
         {
-          path: 'dashboard2',
-          name: 'Dashboard',
-          component: Dashboard2
-        },
-        {
           path: 'myasset',
           name: 'Myasset',
           component: Myasset
@@ -59,6 +54,11 @@ function configRoutes () {
           path: 'select',
           name: 'Select',
           component: Select
+        },
+        {
+          path: 'about',
+          name: 'About',
+          component: About
         },
       ]
     },
