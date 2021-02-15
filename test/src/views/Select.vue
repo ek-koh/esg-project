@@ -19,36 +19,48 @@
             <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel2">매수하기</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h3><animated-number :value="value" :duration="500" :formatValue="formatToPrice" v-if="this.animateDisplayFlag" /></h3>
-                        <br><input v-model="value" type="number" min="1" max="10000"/> 주
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" @click="test">계산하기</button>
-                        <button type="button" class="btn btn-primary">매수하기</button>
-                    </div>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel2">매수하기</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3><animated-number :value="value" :duration="500" :formatValue="formatToPrice" v-if="this.animateDisplayFlag" /></h3>
+                            <br><input v-model="value" type="number" min="1" max="10000"/> 주
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @click="test">계산하기</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">매수하기</button>
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="../assets/maesu.jpg" alt="매수화면" width="320px" height="480px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">내 포트폴리오에 추가</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h3><animated-number :value1="value1" :duration="500" :formatValue="formatToPrice" v-if="this.animateDisplayFlag2" /></h3>
-                        <br><input v-model="value1" type="number" min="1" max="10000"/> 주 구매 시
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" @click="test1">점수확인</button>
-                        <button type="button" class="btn btn-primary">추가</button>
-                    </div>
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">내 포트폴리오에 추가</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3><animated-number :value1="value1" :duration="500" :formatValue="formatToPrice2" v-if="this.animateDisplayFlag2" /></h3>
+                            <br><input v-model="value1" type="number" min="1" max="10000"/> 주 구매 시
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" @click="test1">점수확인</button>
+                            <button type="button" class="btn btn-primary">추가</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,8 +157,8 @@ export default {
         }
     },
     methods: {
-        formatToPrice2(value) {
-            return `${Number(value * 2 + 88).toFixed(0) + "점"}`;
+        formatToPrice2(value1) {
+            return `${Number(this.value1 * 2 + 88).toFixed(0) + "점"}`;
         },
         formatToPrice(value) {
             return `${Number(value * 136500).toFixed(0) + "원"}`;
