@@ -54,12 +54,25 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <h3><animated-number :value1="value1" :duration="500" :formatValue="formatToPrice2" v-if="this.animateDisplayFlag2" /></h3>
+                            <h3><animated-number :value1="value" :duration="500" :formatValue="formatToPrice2" v-if="this.animateDisplayFlag2" /></h3>
                             <br><input v-model="value1" type="number" min="1" max="10000"/> 주 구매 시
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" @click="test1">점수확인</button>
-                            <button type="button" class="btn btn-primary">추가</button>
+                            <button type="button" class="btn btn-secondary" @click="test1">점수확인</button>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">추가</button>
+                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>성공적으로 포트폴리오에 추가했습니다.</p>
+                                            <p>현재 포트폴리오 내 ESG점수는 <strong>{{ value1 * 2 + 88 }}점</strong>입니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
