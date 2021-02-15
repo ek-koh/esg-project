@@ -219,10 +219,15 @@ export default {
   data () {
     return {
       isAsset: true,
-      isESG: false
+      isESG: false,
+      logined: false
     }
   },
   methods: {
+    login() {
+      this.logined = true
+      this.$emit('logined')
+    },
     Asset: function() {
       this.isAsset = true
       this.isESG = false
