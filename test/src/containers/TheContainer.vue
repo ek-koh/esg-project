@@ -16,10 +16,10 @@
     </CWrapper>
   </div>
   <div class="c-app flex-row align-items-center" v-else>
-    <CContainer>
-      <CRow class="justify-content-center">
-        <CCol md="8">
-          <CCardGroup>
+    <div v-if="landed">
+      <CContainer>
+        <CRow class="justify-content-center">
+          <CCol md="8">
             <CCard class="p-4">
               <CCardBody>
                 <CForm>
@@ -40,7 +40,7 @@
                   </CInput>
                   <CRow>
                     <CCol col="6" class="text-left">
-                      <CButton color="primary" class="px-4" v-on:click="login">로그인하기</CButton>
+                      <CButton color="primary" class="px-4" v-on:click="login">Login</CButton>
                     </CCol>
                     <CCol col="6" class="text-right">
                       <CButton color="link" class="px-0">Forgot password?</CButton>
@@ -50,28 +50,34 @@
                 </CForm>
               </CCardBody>
             </CCard>
-            <CCard
-              color="primary"
-              text-color="white"
-              class="text-center py-5 d-md-down-none"
-              body-wrapper
-            >
+          </CCol>
+        </CRow>
+      </CContainer>
+    </div>
+    <div v-else>
+      <CContainer>
+        <CRow class="justify-content-center">
+          <CCol md="8">
+            <CCard class="p-4">
               <CCardBody>
-                <h2>Sign up</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <CButton
-                  color="light"
-                  variant="outline"
-                  size="lg"
-                >
-                  Register Now!
-                </CButton>
+                <CForm>
+                  <br>
+                  <br>
+                  <img src="../assets/logo.png" alt="으쓱-" height="150px" width="300x">
+                  <br>
+                  <br>
+                  <CRow class="align-items-center">
+                    <CCol sm xs="12" class="text-center mt-12">
+                      <CButton color="success" v-on:click="land">Login</CButton>
+                    </CCol>
+                  </CRow>
+                </CForm>
               </CCardBody>
             </CCard>
-          </CCardGroup>
-        </CCol>
-      </CRow>
-    </CContainer>
+          </CCol>
+        </CRow>
+      </CContainer>
+    </div>
   </div>
 </template>
 
@@ -89,12 +95,16 @@ export default {
   },
   data() {
     return {
-      logined:false
+      logined:false,
+      landed:false
     }
   },
   methods: {
     login() {
       this.logined=true
+    },
+    land() {
+      this.landed=true
     }
   }
 }
