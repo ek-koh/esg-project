@@ -8,18 +8,6 @@
 
     </div>
     <br>
-    <div name="fade" v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
-      <div class="content_bg">
-        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/90/27/5c/90275cb88dfa4196c65df4c4bbd37548.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
-      </div>
-      <div class="caption">
-        <div class="caption_title">신재생에너지</div>
-        <div class="caption_desc">
-          신재생에너지관련섹터
-          <router-link to="select" class="caption_link" style="margin:15px">더 보기</router-link>
-        </div>
-      </div>
-    </div>
     <div v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/ed/93/1f/ed931f7bac82e67b4e6c24dad1406c2f.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
@@ -28,6 +16,18 @@
         <div class="caption_title">전기차</div>
         <div class="caption_desc">
           전기차관련섹터
+          <router-link to="select" class="caption_link" style="margin:15px">더 보기</router-link>
+        </div>
+      </div>
+    </div>
+    <div name="fade" v-show="isE" class="hover_effect_box hover_effect_1" style="float:left;">
+      <div class="content_bg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/90/27/5c/90275cb88dfa4196c65df4c4bbd37548.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+      </div>
+      <div class="caption">
+        <div class="caption_title">신재생에너지</div>
+        <div class="caption_desc">
+          신재생에너지관련섹터
           <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
@@ -49,9 +49,33 @@
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://www.ikont.co.jp/company/img/ph-company-08.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
       <div class="caption">
-        <div class="caption_title">동물</div>
+        <div class="caption_title">양성평등</div>
+        <div class="caption_desc" style="margin:0px;">
+          양성평등을<br> 실천하는 기업
+          <a herf="#" class="caption_link" style="margin:15px;">더 보기</a>
+        </div>
+      </div>
+    </div>
+    <div v-show="isS" class="hover_effect_box hover_effect_1" style="float:left;">
+      <div class="content_bg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/9f/14/b5/9f14b5d633947854a59f1f029b8896e1.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+      </div>
+      <div class="caption">
+        <div class="caption_title">준법경영</div>
         <div class="caption_desc">
-          동물관련섹터
+          준법경영을 실천하는 기업
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+        </div>
+      </div>
+    </div>
+    <div v-show="isS" class="hover_effect_box hover_effect_1" style="float:left;">
+      <div class="content_bg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://www.ikont.co.jp/company/img/ph-company-08.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+      </div>
+      <div class="caption">
+        <div class="caption_title">사회공헌</div>
+        <div class="caption_desc">
+          사회공헌활동을 실천하는 기업
           <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
@@ -61,21 +85,33 @@
         <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/9f/14/b5/9f14b5d633947854a59f1f029b8896e1.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
       <div class="caption">
-        <div class="caption_title">동물</div>
+        <div class="caption_title">회계제도</div>
         <div class="caption_desc">
-          동물관련섹터
+          최신화된 회계제도를 적용하는 기업
           <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
     </div>
     <div v-show="isG" class="hover_effect_box hover_effect_1" style="float:left;">
       <div class="content_bg">
-        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://www.ikont.co.jp/company/img/ph-company-08.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/9f/14/b5/9f14b5d633947854a59f1f029b8896e1.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
       </div>
       <div class="caption">
-        <div class="caption_title">동물</div>
+        <div class="caption_title">주주권리</div>
         <div class="caption_desc">
-          동물관련섹터
+          주주의 권리를 위해 노력하는 기업
+          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+        </div>
+      </div>
+    </div>
+    <div v-show="isG" class="hover_effect_box hover_effect_1" style="float:left;">
+      <div class="content_bg">
+        <img class="bd-placeholder-img bd-placeholder-img-lg" width="100%" height="100%" src="https://i.pinimg.com/564x/9f/14/b5/9f14b5d633947854a59f1f029b8896e1.jpg" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" role="img" style="flex-shrink: 0;"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+      </div>
+      <div class="caption">
+        <div class="caption_title">금융감독체계정비</div>
+        <div class="caption_desc">
+          금융감독체계가 정비된 금융(증권)사
           <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
         </div>
       </div>
