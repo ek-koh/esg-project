@@ -20,7 +20,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel2">매수하기</h5>
+                            <h5 class="modal-title" id="exampleModalLabel2"><strong>매수하기</strong></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -50,7 +50,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">내 포트폴리오에 추가</h5>
+                            <h5 class="modal-title" id="exampleModalLabel"><strong>내 포트폴리오에 추가</strong></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -80,13 +80,7 @@
             <tr>
             <th scope="row">051910</th>
             <td>LG화학</td>
-            <td>A</td>
-            <td><button class="btn btn-danger btn-sm"><i class="fas fa-donate"></i> 매수</button> <button class="btn btn-success btn-sm"><i class="fas fa-bookmark"></i> 추가</button></td>
-            </tr>
-            <tr>
-            <th scope="row">222080</th>
-            <td>씨아이에스</td>
-            <td>A</td>
+            <td>B</td>
             <td><button class="btn btn-danger btn-sm"><i class="fas fa-donate"></i> 매수</button> <button class="btn btn-success btn-sm"><i class="fas fa-bookmark"></i> 추가</button></td>
             </tr>
             <tr>
@@ -98,7 +92,7 @@
             <tr>
             <th scope="row">1211 HK</th>
             <td>BYD CO LTD-H</td>
-            <td>A</td>
+            <td>B</td>
             <td><button class="btn btn-danger btn-sm"><i class="fas fa-donate"></i> 매수</button> <button class="btn btn-success btn-sm"><i class="fas fa-bookmark"></i> 추가</button></td>
             </tr>
             <tr>
@@ -126,7 +120,7 @@
             <tr>
             <th scope="row">305540</th>
             <td>미래에셋TIGER<br>2차전지테마 ETF</td>
-            <td>A</td>
+            <td>B</td>
             <td><button class="btn btn-danger btn-sm"><i class="fas fa-donate"></i> 매수</button> <button class="btn btn-success btn-sm"><i class="fas fa-bookmark"></i> 추가</button></td>
             </tr>
             <tr>
