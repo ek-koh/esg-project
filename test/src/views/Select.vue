@@ -37,7 +37,7 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="../assets/maesu.jpg" alt="매수화면" width="320px" height="480px">
+                                            <img src="../assets/maesu.jpg" alt="매수화면" width="80%" height="100%">
                                         </div>
                                     </div>
                                 </div>
