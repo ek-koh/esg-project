@@ -1,5 +1,5 @@
 <template>
-  <div class="c-app" v-if="logined">
+  <div class="c-app" v-if="logined"> 
     <TheSidebar/>
     <CWrapper>
       <TheHeader/>
