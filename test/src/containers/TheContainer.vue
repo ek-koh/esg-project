@@ -55,28 +55,19 @@
       </CContainer>
     </div>
     <div v-else>
-      <CContainer>
-        <CRow class="justify-content-center">
-          <CCol md="8">
-            <CCard class="p-4">
-              <CCardBody>
-                <CForm>
-                  <br>
-                  <br>
-                  <img src="../assets/logo.png" alt="으쓱-" height="150px" width="300x">
-                  <br>
-                  <br>
-                  <CRow class="align-items-center">
-                    <CCol sm xs="12" class="text-center mt-12">
-                      <CButton color="success" v-on:click="land">Login</CButton>
-                    </CCol>
-                  </CRow>
-                </CForm>
-              </CCardBody>
-            </CCard>
-          </CCol>
-        </CRow>
-      </CContainer>
+      <transition-group name="fade" v-on:after-enter="fadeNext">
+        <br v-show="fade[0]" key="0">
+        <CContainer v-show="fade[1]" key="1">
+          <img src="../assets/logo.png" height="100%" width="100%" style="display: block; margin: 0px auto;">
+          <br>
+          <br>
+          <CRow class="align-items-center">
+            <CCol sm xs="12" class="text-center mt-12">
+              <CButton color="success" class="px-4" v-on:click="land"><h4>Login</h4></CButton>
+            </CCol>
+          </CRow>
+        </CContainer>
+      </transition-group>
     </div>
   </div>
 </template>
@@ -85,6 +76,8 @@
 import TheSidebar from './TheSidebar'
 import TheHeader from './TheHeader'
 import TheFooter from './TheFooter'
+
+let fadeIdx = 0
 
 export default {
   name: 'TheContainer',
@@ -96,7 +89,8 @@ export default {
   data() {
     return {
       logined:false,
-      landed:false
+      landed:false,
+      fade:[false, false]
     }
   },
   methods: {
@@ -105,7 +99,13 @@ export default {
     },
     land() {
       this.landed=true
+    },
+    fadeNext: function() {
+      this.fade.splice(fadeIdx++, 1, true)
     }
+  },
+  mounted() {
+    setTimeout(this.fadeNext, 1000)
   }
 }
 </script>

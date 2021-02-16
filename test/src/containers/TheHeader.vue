@@ -12,7 +12,7 @@
     />
     <CHeaderBrand class="mx-auto d-lg-none" to="/">
       <!-- <CIcon name="logo" height="48" alt="Logo"/> -->
-      <img style="margin-top:10px; margin-bottom:10px; margin-left: 10px;" src="../assets/logo.png" alt="으쓱-" height="60px" width="120x">
+      <img style="margin-top:10px; margin-bottom:10px; margin-left: 10px;" src="../assets/logo.png" alt="으쓱-" height="55px" width="120x">
     </CHeaderBrand>
     <CHeaderNav class="mr-4">
       <TheHeaderDropdownAccnt/>

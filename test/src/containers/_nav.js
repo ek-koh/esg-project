@@ -59,15 +59,6 @@ export default [
       },
       {
         _name: 'CSidebarNavItem',
-      },
-      {
-        _name: 'CSidebarNavItem',
-      },
-      {
-        _name: 'CSidebarNavItem',
-      },
-      {
-        _name: 'CSidebarNavItem',
         name: '신한 알파 다운로드',
         href: 'https://play.google.com/store/apps/details?id=com.shinhaninvest.nsmts&hl=ko&gl=US',
         icon: { name: 'cil-cloud-download', class: 'text-white' },
