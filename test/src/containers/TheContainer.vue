@@ -24,7 +24,11 @@
               <CCardBody>
                 <CForm>
                   <img src="../assets/logo.png" alt="으쓱-" height="60px" width="120x">
+                  <br>
                   <p class="text-muted">Sign In to your account</p>
+                  <small class="text-muted">다른 로그인 방법</small>
+                  <br>
+                  <br>
                   <CInput
                     placeholder="아이디"
                     autocomplete="username email"
@@ -43,7 +47,6 @@
                       <CButton color="primary" class="px-4" v-on:click="login">Login</CButton>
                     </CCol>
                     <CCol col="6" class="text-right">
-                      <CButton color="link" class="d-lg-none"><small>다른 로그인 방법</small></CButton>
                       <CButton color="link" class="d-lg-none"><small>ID/PW 찾기</small></CButton>
                       <CButton color="link" class="d-lg-none"><small>회원가입</small></CButton>
                     </CCol>
