@@ -43,8 +43,9 @@
                       <CButton color="primary" class="px-4" v-on:click="login">Login</CButton>
                     </CCol>
                     <CCol col="6" class="text-right">
-                      <CButton color="link" class="px-0">Forgot password?</CButton>
-                      <CButton color="link" class="d-lg-none">Register now!</CButton>
+                      <CButton color="link" class="d-lg-none"><small>다른 로그인 방법</small></CButton>
+                      <CButton color="link" class="d-lg-none"><small>ID/PW 찾기</small></CButton>
+                      <CButton color="link" class="d-lg-none"><small>회원가입</small></CButton>
                     </CCol>
                   </CRow>
                 </CForm>

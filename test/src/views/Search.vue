@@ -16,7 +16,7 @@
         <div class="caption_title">전기차</div>
         <div class="caption_desc">
           전기차관련섹터
-          <router-link to="select" class="caption_link" style="margin:15px">더 보기</router-link>
+          <router-link to="select" class="caption_link" style="margin:10px;">더 보기</router-link>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="caption_title">신재생에너지</div>
         <div class="caption_desc">
           신재생에너지관련섹터
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
         <div class="caption_title">수소에너지</div>
         <div class="caption_desc">
           수소에너지관련섹터
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
         <div class="caption_title">양성평등</div>
         <div class="caption_desc" style="margin:0px;">
           양성평등을<br>실천하는 기업
-          <a herf="#" class="caption_link" style="margin:15px;">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;;">더 보기</a>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
         <div class="caption_title">준법경영</div>
         <div class="caption_desc">
           준법경영을<br>실천하는 기업
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
         <div class="caption_title">사회공헌</div>
         <div class="caption_desc">
           사회공헌활동을<br>실천하는 기업
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -88,7 +88,7 @@
         <div class="caption_title">회계제도</div>
         <div class="caption_desc">
           최신화된 회계제도를<br>적용하는 기업
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
         <div class="caption_title">주주권리</div>
         <div class="caption_desc">
           주주의 권리를 위해<br>노력하는 기업
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -112,7 +112,7 @@
         <div class="caption_title">금융감독체계정비</div>
         <div class="caption_desc">
           금융감독체계가<br>정비된 금융(증권)사
-          <a herf="#" class="caption_link" style="margin:15px">더 보기</a>
+          <a herf="#" class="caption_link" style="margin:10px;">더 보기</a>
         </div>
       </div>
     </div>
@@ -157,8 +157,8 @@ export default {
 
 <style>
 .hover_effect_box {
-   width: 180px;
-   height: 180px;
+   width: 40vw;
+   height: 40vw;
    margin: 0px;
    border: 5px solid #f3f3f3;
    overflow: hidden;
@@ -172,8 +172,8 @@ export default {
    box-sizing: initial;
 }
 .hover_effect_box .caption {
-   width: 180px;
-   height: 180px;
+   width: 40vw;
+   height: 40vw;
    position: absolute;
    overflow: hidden;
    top: 0;
@@ -188,17 +188,17 @@ export default {
    color: #fff;
    text-align: center;
    position: relative;
-   font-size: 17px;
+   font-size: 14px;
    padding: 10px;
    background: rgba(0, 0, 0, 0.8);
-   margin: 20px 0 0 0;
+   margin: 10px 0 0 0;
 }
 .hover_effect_box .caption_desc {
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1.5;
     position: relative;
     color: #fff;
-    padding: 30px 20px 40px;
+    padding: 15px 10px 30px;
     text-align: center;
  }
 .hover_effect_box .caption_link {
