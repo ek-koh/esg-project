@@ -24,7 +24,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <h3><animated-number :value="value" :duration="500" :formatValue="formatToPrice" v-if="this.animateDisplayFlag" /></h3>
+                            <h3><animated-number :value="value" :duration="500" :formatValue="formatToPrice" v-if="animateDisplayFlag" /></h3>
                             <br><input v-model="value" type="number" min="1" max="10000"/> 주
                         </div>
                         <div class="modal-footer">
@@ -37,7 +37,62 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <img src="../assets/maesu.jpg" alt="매수화면" width="80%" height="100%">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                    <th scope="row">계좌번호</th>
+                                                    <td>123-45-67890</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">종목명</th>
+                                                    <td>SKC</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">주문수량</th>
+                                                    <td>{{value}}주</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">주문단가</th>
+                                                    <td>136500원</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">주문유형</th>
+                                                    <td>지정가</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">주문금액</th>
+                                                    <td>{{value * 136500}}원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                    <th scope="row">가계산수수료</th>
+                                                    <td>10원</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">정산금액</th>
+                                                    <td>{{value * 136500 + 10}}원</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">취소</button>
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">매수주문</button>
+                                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p><strong>SKC</strong> 주식 총 <strong>{{value}}</strong>주 매수에 성공했습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -54,13 +109,13 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <h3><animated-number :value1="value" :duration="500" :formatValue="formatToPrice2" v-if="this.animateDisplayFlag2" /></h3>
+                            <h3><animated-number :value="value1" :duration="500" :round="1" :formatValue="formatToPrice2" v-if="animateDisplayFlag2"/></h3>
                             <br><input v-model="value1" type="number" min="1" max="10000"/> 주 구매 시
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" @click="test1">점수확인</button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4">추가</button>
-                            <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5">추가</button>
+                            <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -68,7 +123,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <p>성공적으로 포트폴리오에 추가했습니다.</p>
-                                            <p>현재 포트폴리오 내 ESG점수는 <strong>{{ value1 * 2 + 88 }}점</strong>입니다.</p>
+                                            <p>현재 포트폴리오 내 ESG점수는 <strong>{{ score() }}점</strong>입니다.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +220,12 @@ export default {
     },
     methods: {
         formatToPrice2(value1) {
-            return `${Number(this.value1 * 2 + 88).toFixed(0) + "점"}`;
+            if (value1 * 2 + 88 < 100) {
+                return `${Number(value1 * 2 + 88).toFixed(0) + "점 (+" + value1 * 2 + ")"}`;
+            }
+            else {
+                return `${"100점 (+12)"}`;
+            }
         },
         formatToPrice(value) {
             return `${Number(value * 136500).toFixed(0) + "원"}`;
@@ -175,6 +235,14 @@ export default {
         },
         test1() {
             this.animateDisplayFlag2 = true;
+        },
+        score() {
+            if (this.value1 * 2 + 88 < 100) {
+                return this.value1 * 2 + 88;
+            }
+            else {
+                return 100;
+            }
         }
     }
 
